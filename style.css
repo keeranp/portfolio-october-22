@@ -4,10 +4,10 @@ body {
     margin: 0;
     background-color: #079992;
     font-family: 'Montserrat';
+    color: #ecf0f1;
 }
 
 nav {
-    color: #ecf0f1;
     position: fixed;
     background-color: #38ada9;
     height: 10%;
@@ -46,16 +46,55 @@ header {
 
 h1 {
     margin: 0;
-    color: #ecf0f1;
     font-size: 4em;
 }
 
 h6 {
     margin: 0;
-    color: #ecf0f1;
     font-size: 1em;
 }
 
-p {
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 75%;
+}
+
+.experiences-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.card{
+    border: solid #38ada9;
+    border-radius: .5em;
+    padding: 15px;
+    width: 45%;
+}
+
+.card a{
+    padding: 5px;
+    border: solid #38ada9;
+    border-radius: .5em;
+    text-decoration: none;
     color: #ecf0f1;
+    transition: .2s;
+}
+
+.card a:hover{
+    border: solid #ecf0f1;
+}
+
+h3{
+    font-size: 1.5em;
+    margin: 0;
 }
