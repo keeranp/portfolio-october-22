@@ -6,14 +6,41 @@ body {
     font-family: 'Montserrat';
 }
 
-header{
+nav {
+    color: #ecf0f1;
+    position: fixed;
+    background-color: #38ada9;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    padding: 15px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    font-size: 1.2em;
+}
+
+nav h2 {
+    padding: 15px;
+    margin-right: auto;
+}
+
+header {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.introduction{
+.introduction {
     width: 60%;
 }
 
@@ -29,6 +56,6 @@ h6 {
     font-size: 1em;
 }
 
-p{
+p {
     color: #ecf0f1;
 }
