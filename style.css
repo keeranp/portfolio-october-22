@@ -113,7 +113,7 @@ h2 {
     align-items: flex-start;
 }
 
-.card a{
+.card a, .main a{
     padding: 5px;
     border: solid #38ada9;
     border-radius: .5em;
@@ -123,8 +123,13 @@ h2 {
     margin-top: auto;
 }
 
-.card a:hover{
+.card a:hover, .main a:hover{
     border: solid #ecf0f1;
+}
+
+.card img{
+    width: 75%;
+    align-self: center;
 }
 
 h3{
@@ -215,4 +220,24 @@ ul{
 li{
     margin-bottom: 20px;
     text-align: center;
+}
+
+.four-images{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.four-images img{
+    width: 50%;
+}
+
+.main a{
+    margin-bottom: 20px;
+}
+
+#test{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
 }
