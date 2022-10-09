@@ -194,6 +194,12 @@ footer{
     margin-top: 20px;
 }
 
+.bottom-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 img{
     width: 100%;
     height: auto;
