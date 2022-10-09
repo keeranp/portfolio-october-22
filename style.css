@@ -26,6 +26,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 nav a {
@@ -55,6 +56,18 @@ header {
     width: 60%;
 }
 
+.introduction p {
+    width: 50%;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+b{
+    color: #b8e994;
+}
+
 h1 {
     margin: 0;
     font-size: 4em;
@@ -70,6 +83,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#experiences{
+    background-color: #b71540;
 }
 
 .container {
@@ -91,6 +108,9 @@ h2 {
     padding: 15px;
     width: 45%;
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .card a{
@@ -100,6 +120,7 @@ h2 {
     text-decoration: none;
     color: #ecf0f1;
     transition: .2s;
+    margin-top: auto;
 }
 
 .card a:hover{
@@ -111,8 +132,81 @@ h3{
     margin: 0;
 }
 
+#projects{
+    background-color: #0c2461;
+}
+
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0c2461;
+}
+
+
+
+/* details pages */
+
+.experience-container{
+    display: flex;
+}
+
+.main{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 60%;
+    flex-direction: column;
+    height: auto;
+}
+
+.main h2{
+    margin-top: 0;
+}
+
+.skills {
+    padding-top: 10%;
+    align-items: center;
+    background-color: #b71540;
+    width: 20%;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.paragraph{
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.left-image{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.right-image{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+li{
+    margin-bottom: 20px;
+    text-align: center;
 }
