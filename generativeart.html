@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Keeran Paheerathan</h2>
+        <a href="index.html#home-page">Home</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#projects">Projects</a>
+    </nav>
+    <div class="experience-container">
+        <section class="main">
+            <h2>Generative Art</h2>
+            <div id="lipsum">
+                <p>
+                    Generative art is a digital art form that uses algorithms to create self-generating
+                    and/or non-predetermined works.
+                    To gain more knowledge in image processing I created a program in <b>Python</b> and
+                    <b>OpenCV</b> to reproduce an image
+                    by superimposing several triangles.
+                </p>
+                <p>
+                    Coding this program allowed me to learn how to <b>calculate the similarity between two
+                        images</b> in
+                    order to compare the base image and the new image.
+                </p>
+            </div>
+            <div class="four-images">
+                <img src="assets/img/golden-before.jpg">
+                <img src="assets/img/golden-after.jpg">
+                <img src="assets/img/fuji.jpg">
+                <img src="assets/img/fuji_processed.gif">
+            </div>
+            <h2>Test it yourself !</h2>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <img id="test" src="">
+            <a href="https://github.com/keeranp/thorn-filter">See more on Github</a>
+        </section>
+        <section class="skills">
+            <h3>Acquired Skills</h3>
+            <ul>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById("image")
+        imageInput.onchange = e => {
+            let image = e.target.files[0]
+
+            let body = new FormData()
+
+            body.append("file", image)
+
+            fetch("https://filter-back.herokuapp.com/filter/thorn", {
+                method: "POST",
+                body: body
+            }).then(res =>{
+                res.blob().then(i =>{
+                    console.log(i)
+                    const img = document.getElementById("test")
+                    img.src = URL.createObjectURL(i)
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>
