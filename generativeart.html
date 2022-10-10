@@ -41,6 +41,9 @@
             </div>
             <h2>Test it yourself !</h2>
             <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            <div class="loader">
+
+            </div>
             <img id="test" src="">
             <a href="https://github.com/keeranp/thorn-filter">See more on Github</a>
         </section>
@@ -55,7 +58,9 @@
         const imageInput = document.getElementById("image")
         imageInput.onchange = e => {
             let image = e.target.files[0]
-
+            const img = document.getElementById("test")
+            const loader = document.getElementsByClassName("loader")[0]
+            loader.style.display = "block"
             let body = new FormData()
 
             body.append("file", image)
@@ -65,8 +70,7 @@
                 body: body
             }).then(res =>{
                 res.blob().then(i =>{
-                    console.log(i)
-                    const img = document.getElementById("test")
+                    loader.style.display = "none"
                     img.src = URL.createObjectURL(i)
                 })
             })
