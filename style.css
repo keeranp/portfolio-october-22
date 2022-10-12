@@ -185,6 +185,17 @@ footer{
     margin-bottom: 5vh;
 }
 
+.column-paragraph{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.column-paragraph ul li{
+    text-align: left;
+}
+
 .left-image{
     display: flex;
     flex-direction: column;
