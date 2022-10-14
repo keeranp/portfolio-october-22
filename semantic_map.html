@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation of a semantic map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Keeran Paheerathan</h2>
+        <a href="index.html#home-page">Home</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#projects">Projects</a>
+        <div class="button">
+            <a href="assets/documents/CV.pdf" target="_blank">Resume</a>
+        </div>
+    </nav>
+    <div class="experience-container">
+        <section class="main">
+            <h2>Creation of the semantic map of an urban environment</h2>
+            <p>
+                The goal of this project was to <b>create a semantic map of an urban area</b> using the data from the
+                <b>LiDAR and the cameras of the KITTI Dataset</b>.
+                This project is based on two main parts: 2D image segmentation and 3D point cloud processing.
+                The end result would be having a <b>global point cloud with each of its point having a certain class
+                    depending on the object
+                    it belongs to</b>.
+            </p>
+
+            <h3>The KITTI Dataset</h3>
+            <p>
+                The KITTI Dataset is made of <b>multiple acquisition from each sensors that was on a car driving in a
+                    urban area</b>.
+                Each of these acquisition has different types of images and one point cloud for each acquisition.
+                The goal is to <b>merge all the point clouds into one to have the global point cloud of the area</b>
+                where the car was driving.
+            </p>
+
+            <h3>First step of the LiDAR data processing</h3>
+            <p>
+                <img src="assets/img/projection.PNG" style="float: right; max-width: 400px;">
+                To construct the map we first need to process the point clouds obtained by the lidar. A
+                point cloud consists of a <b>list of coordinates corresponding to the position of points in three
+                    dimensions</b>. The goal is now to have semantic information in addition to the
+                position of the points.
+                To achieve this, we will first <b>project the points of the point cloud into the
+                    coordinate system of the camera</b> where the images are acquired.
+            </p>
+
+            <p>
+                Here is the result:
+            </p>
+            <img src="assets/img/projection_result.jpg">
+            <p>
+                For now, each point has the same color as the corresponding pixel in the image.
+                The points where there is no corresponding pixel in the image will not be used.
+            </p>
+
+            <h3>Image segmentation</h3>
+
+            <p>
+                We used a pretrained model called <b>FastSeg</b> to do the segmentation.
+            </p>
+            <div style="width:100%;display: flex; flex-direction: column; align-items:center;">
+                <img src="assets/img/image-019.jpg" style="max-width: 500px;">
+                <img src="assets/img/image-020.jpg" style="max-width: 500px;">
+                <img src="assets/img/image-021.jpg" style="max-width: 500px;">
+            </div>
+            <p>
+                Now each point of the point cloud has its own class. We just need to <b>reverse the projection</b> to
+                retrieve our data in 3D.
+            </p>
+
+            <h3>Creation of the global map</h3>
+            <p>
+                We used the data from the <b>inertial measurement unit</b> that was on the car to replace each point
+                cloud in its absolute position.
+                Now, if we remove all the point that belongs to objects that are not static like cars or bicycles, we
+                will finally have our semantic map.
+            </p>
+            <div class="two-images">
+                <img src="assets/img/image-001.jpg">
+                <img src="assets/img/image-026.jpg">
+            </div>
+
+        </section>
+        <section class="skills">
+            <h3>Acquired Skills</h3>
+            <ul>
+                <li>Manipulate point clouds with NumPy</li>
+                <li>Do Image Segmentation with a pretrained model</li>
+                <li>Project a point cloud in the coordinate system of a camera</li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
