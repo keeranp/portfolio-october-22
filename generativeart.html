@@ -19,37 +19,46 @@
     <div class="experience-container">
         <section class="main">
             <h2>Generative Art</h2>
-            <div id="lipsum">
-                <p>
-                    Generative art is a digital art form that uses algorithms to create self-generating
-                    and/or non-predetermined works.
-                    To gain more knowledge in image processing I created a program in <b>Python</b> and
-                    <b>OpenCV</b> to reproduce an image
-                    by superimposing several triangles.
-                </p>
-                <p>
-                    Coding this program allowed me to learn how to <b>calculate the similarity between two
-                        images</b> in
-                    order to compare the base image and the new image.
-                </p>
-            </div>
-            <div class="four-images">
+            <p>
+                Generative art is a digital art form that uses algorithms to create self-generating
+                and/or non-predetermined works.
+                To gain more knowledge in image processing I created a program in <b>Python</b> and
+                <b>OpenCV</b> to reproduce an image
+                by superimposing several triangles.
+            </p>
+            <p>
+                Coding this program allowed me to learn how to <b>calculate the similarity between two
+                    images</b> in
+                order to compare the base image and the new image.
+                Then I created a <b>backend REST API using FastAPI</b> in order to call this program on this website.
+            </p>
+            <div class="two-images">
                 <img src="assets/img/golden-before.jpg">
                 <img src="assets/img/golden-after.jpg">
+            </div>
+            <div class="two-images">
                 <img src="assets/img/fuji.jpg">
                 <img src="assets/img/fuji_processed.gif">
             </div>
-            <h2>Test it yourself !</h2>
-            <input type="file" id="image" name="image" accept="image/png, image/jpeg">
-            <div class="loader">
+            <div class="testarea">
+                <h2>Test it yourself !</h2>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+                <div class="loader">
 
+                </div>
+                <div class="loader-text">
+                    This will take more or less time depending on the size of the image.
+                </div>
+                <img id="test" src="">
+                <a href="https://github.com/keeranp/thorn-filter" target="_blank">See more on Github</a>
             </div>
-            <img id="test" src="">
-            <a href="https://github.com/keeranp/thorn-filter" target="_blank">See more on Github</a>
         </section>
         <section class="skills">
             <h3>Acquired Skills</h3>
             <ul>
+                <li>Use Python, NumPy and OpenCV for Image Processing</li>
+                <li>Calculate the similarity between two images</li>
+                <li>Implement a Backend REST API in Python using FastAPI</li>
             </ul>
         </section>
     </div>
@@ -60,7 +69,9 @@
             let image = e.target.files[0]
             const img = document.getElementById("test")
             const loader = document.getElementsByClassName("loader")[0]
+            const loaderText = document.getElementsByClassName("loader-text")[0]
             loader.style.display = "block"
+            loaderText.style.display = "block"
             let body = new FormData()
 
             body.append("file", image)
@@ -68,9 +79,10 @@
             fetch("https://filter-back.herokuapp.com/filter/thorn", {
                 method: "POST",
                 body: body
-            }).then(res =>{
-                res.blob().then(i =>{
+            }).then(res => {
+                res.blob().then(i => {
                     loader.style.display = "none"
+            loaderText.style.display = "none"
                     img.src = URL.createObjectURL(i)
                 })
             })

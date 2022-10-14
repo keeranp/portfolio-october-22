@@ -161,11 +161,22 @@ footer{
     margin-left: 10%;
     width: 60%;
     flex-direction: column;
+    align-items: flex-start;
     height: auto;
 }
 
 .main h2{
+    width: 100%;
     margin-top: 0;
+    text-align: center;
+}
+
+.main h3{
+    margin-top: 5vh;
+}
+
+.main h4{
+    margin-bottom: 0;
 }
 
 .skills {
@@ -180,9 +191,9 @@ footer{
     justify-content: flex-start;
 }
 
-.paragraph{
-    display: flex;
-    margin-bottom: 5vh;
+.main ul{
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .column-paragraph{
@@ -192,33 +203,25 @@ footer{
     align-items: flex-start;
 }
 
-.column-paragraph ul li{
+.paragraph ul li{
     text-align: left;
 }
 
-.left-image{
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    margin-top: 20px;
-}
-
-.right-image{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.bottom-image{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    margin: 10px;
+}
+
+.two-images{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.two-images img{
+    max-width: 45%;
 }
 
 ul{
@@ -231,16 +234,6 @@ ul{
 li{
     margin-bottom: 20px;
     text-align: center;
-}
-
-.four-images{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.four-images img{
-    width: 50%;
 }
 
 .main a{
@@ -264,8 +257,19 @@ li{
     display: none;
 }
 
+.loader-text{
+    display: none;
+}
+
 @keyframes spin{
     100%{
         transform: rotate(360deg);
     }
+}
+
+.testarea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
