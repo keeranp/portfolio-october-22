@@ -40,6 +40,22 @@ nav a:hover {
     font-size: 1.2em;
 }
 
+nav .button {
+    padding: 5px;
+    margin-right: 15px;
+    border: solid #079992;
+    border-radius: .5em;
+    transition: .2s;
+}
+
+nav .button:hover {
+    border: solid #ecf0f1;
+}
+
+nav .button a:hover {
+    font-size: 1em;
+}
+
 nav h2 {
     padding: 15px;
     margin-right: auto;
@@ -60,11 +76,11 @@ header {
     width: 50%;
 }
 
-p{
+p {
     font-size: 1.2em;
 }
 
-b{
+b {
     color: #b8e994;
 }
 
@@ -85,7 +101,7 @@ section {
     align-items: center;
 }
 
-#experiences{
+#experiences {
     background-color: #b71540;
 }
 
@@ -93,7 +109,7 @@ section {
     width: 75%;
 }
 
-.experiences-card{
+.experiences-card {
     display: flex;
     justify-content: space-between;
 }
@@ -102,7 +118,7 @@ h2 {
     font-size: 3em;
 }
 
-.card{
+.card {
     border: solid #38ada9;
     border-radius: .5em;
     padding: 15px;
@@ -113,7 +129,8 @@ h2 {
     align-items: flex-start;
 }
 
-.card a, .main a{
+.card a,
+.main a {
     padding: 5px;
     border: solid #38ada9;
     border-radius: .5em;
@@ -123,25 +140,26 @@ h2 {
     margin-top: auto;
 }
 
-.card a:hover, .main a:hover{
+.card a:hover,
+.main a:hover {
     border: solid #ecf0f1;
 }
 
-.card img{
+.card img {
     width: 75%;
     align-self: center;
 }
 
-h3{
+h3 {
     font-size: 1.5em;
     margin: 0;
 }
 
-#projects{
+#projects {
     background-color: #0c2461;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,11 +170,11 @@ footer{
 
 /* details pages */
 
-.experience-container{
+.experience-container {
     display: flex;
 }
 
-.main{
+.main {
     margin-top: 10%;
     margin-left: 10%;
     width: 60%;
@@ -165,17 +183,17 @@ footer{
     height: auto;
 }
 
-.main h2{
+.main h2 {
     width: 100%;
     margin-top: 0;
     text-align: center;
 }
 
-.main h3{
+.main h3 {
     margin-top: 5vh;
 }
 
-.main h4{
+.main h4 {
     margin-bottom: 0;
 }
 
@@ -191,62 +209,62 @@ footer{
     justify-content: flex-start;
 }
 
-.main ul{
+.main ul {
     margin-bottom: 0;
     margin-left: 0;
 }
 
-.column-paragraph{
+.column-paragraph {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.paragraph ul li{
+.paragraph ul li {
     text-align: left;
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
     margin: 10px;
 }
 
-.two-images{
+.two-images {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.two-images img{
+.two-images img {
     max-width: 45%;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-li{
+li {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.main a{
+.main a {
     margin-bottom: 20px;
 }
 
-#test{
+#test {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 75%;
 }
 
-.loader{
+.loader {
     margin: 20px auto;
     width: 40px;
     height: 40px;
@@ -257,17 +275,17 @@ li{
     display: none;
 }
 
-.loader-text{
+.loader-text {
     display: none;
 }
 
-@keyframes spin{
-    100%{
+@keyframes spin {
+    100% {
         transform: rotate(360deg);
     }
 }
 
-.testarea{
+.testarea {
     width: 100%;
     display: flex;
     flex-direction: column;
