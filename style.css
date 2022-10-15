@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+html {
+    font-size: 12px;
+}
+
 body {
     margin: 0;
     background-color: #079992;
     font-family: 'Montserrat';
     color: #ecf0f1;
 }
+
+/* Scrollbar */
 
 body::-webkit-scrollbar {
     width: 10px;
@@ -18,84 +24,225 @@ body::-webkit-scrollbar-thumb {
     width: 10px;
 }
 
-nav {
-    position: fixed;
-    background-color: #38ada9;
-    height: 10%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 1;
+/* Navigation */
+@media (min-width: 0px) {
+    nav {
+        background-color: #38ada9;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+    }
+
+    nav h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 15px;
+    }
+
+    nav .links {
+        margin-bottom: 15px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #ecf0f1;
+    }
+
+    nav .button {
+        padding: 5px;
+        border: solid #079992;
+        border-radius: .5em;
+    }
 }
 
-nav a {
-    text-decoration: none;
-    color: #ecf0f1;
-    padding: 15px;
-    transition: 0.2s;
+@media (min-width: 1001px) {
+    nav {
+        position: fixed;
+        background-color: #38ada9;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+    }
+
+    nav h2 {
+        margin: 0;
+        padding: 15px;
+        margin-right: auto;
+    }
+
+    nav .links {
+        margin: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #ecf0f1;
+    }
+
+    nav .links a {
+        padding: 15px;
+        transition: 0.2s;
+    }
+
+    nav .links a:hover {
+        font-size: 1.75rem;
+    }
+
+    nav .button {
+        padding: 5px;
+        border: solid #079992;
+        border-radius: .5em;
+        transition: .2s;
+    }
+
+    nav .button:hover {
+        border: solid #ecf0f1;
+    }
+
 }
 
-nav a:hover {
-    font-size: 1.2em;
-}
-
-nav .button {
-    padding: 5px;
-    margin-right: 15px;
-    border: solid #079992;
-    border-radius: .5em;
-    transition: .2s;
-}
-
-nav .button:hover {
-    border: solid #ecf0f1;
-}
-
-nav .button a:hover {
-    font-size: 1em;
-}
-
-nav h2 {
-    padding: 15px;
-    margin-right: auto;
-}
+/* header */
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.introduction {
-    width: 60%;
+@media (min-width: 0px) {
+    .introduction {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introduction p {
+        width: 90%;
+    }
 }
 
-.introduction p {
-    width: 50%;
+@media (min-width: 1001px) {
+
+    .introduction {
+        width: 60%;
+        text-align: left;
+        display: block;
+    }
+
+    .introduction p {
+        width: 50%;
+    }
 }
 
-p {
-    font-size: 1.2em;
+/* font-sizes */
+
+@media (min-width: 0px) {
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h6,
+    a,
+    li {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 400px) {
+
+    p,
+    a,
+    li {
+        font-size: calc(1rem + 1vw);
+    }
+
+    h1 {
+        font-size: calc(1rem + 4vw);
+    }
+
+    h2 {
+        font-size: calc(1rem + 3vw);
+    }
+
+    h3 {
+        font-size: calc(1rem + 1.5vw);
+    }
+
+    h4 {
+        font-size: calc(1rem + 1.25vw);
+    }
+
+    h6 {
+        font-size: calc(1rem + 1vw);
+    }
+}
+
+@media (min-width: 1001px) {
+
+    p,
+    a,
+    li {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h6 {
+        font-size: 1.75rem;
+    }
 }
 
 b {
     color: #b8e994;
 }
 
-h1 {
-    margin: 0;
-    font-size: 4em;
-}
-
+h1,
+h3,
 h6 {
     margin: 0;
-    font-size: 1em;
+}
+
+@media (min-width: 1001px) {
+    section{
+        min-height: 100vh;
+    }
 }
 
 section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,21 +256,35 @@ section {
     width: 75%;
 }
 
-.experiences-card {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 0px) {
+    .experiences-card {
+        flex-wrap: wrap;
+    }
 }
 
-h2 {
-    font-size: 3em;
+@media (min-width: 1001px) {
+    .experiences-card {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: 45%;
+        flex: 1;
+    }
+}
+
+.experiences-card {
+    display: flex;
+    width: 100%;
 }
 
 .card {
     border: solid #38ada9;
     border-radius: .5em;
     padding: 15px;
-    width: 45%;
     margin-right: 5px;
+    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -146,13 +307,8 @@ h2 {
 }
 
 .card img {
-    width: 75%;
+    margin-top: auto;
     align-self: center;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin: 0;
 }
 
 #projects {
@@ -160,6 +316,7 @@ h3 {
 }
 
 footer {
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,16 +327,48 @@ footer {
 
 /* details pages */
 
-.experience-container {
-    display: flex;
+@media (min-width: 0px) {
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .skills {
+        position: static;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1001px) {
+    .experience-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .main {
+        margin-right: 20%;
+    }
+
+    .skills {
+        position: fixed;
+        right: 0;
+        width: 20%;
+    }
 }
 
 .main {
     margin-top: 10%;
-    margin-left: 10%;
-    width: 60%;
+    width: 80%;
+    padding: 0 10%;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     height: auto;
 }
 
@@ -201,9 +390,6 @@ footer {
     padding-top: 10%;
     align-items: center;
     background-color: #b71540;
-    width: 20%;
-    position: fixed;
-    right: 0;
     text-align: center;
     flex-direction: column;
     justify-content: flex-start;

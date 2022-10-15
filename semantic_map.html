@@ -11,12 +11,14 @@
 
 <body>
     <nav>
-        <h2>Keeran Paheerathan</h2>
-        <a href="index.html#home-page">Home</a>
-        <a href="index.html#experiences">Experiences</a>
-        <a href="index.html#projects">Projects</a>
-        <div class="button">
-            <a href="assets/documents/CV.pdf" target="_blank">Resume</a>
+        <h2 href="index.html">Keeran Paheerathan</h2>
+        <div class="links">
+            <a href="index.html#home-page">Home</a>
+            <a href="index.html#experiences">Experiences</a>
+            <a href="index.html#projects">Projects</a>
+            <div class="button">
+                <a href="assets/documents/CV.pdf" target="_blank">Resume</a>
+            </div>
         </div>
     </nav>
     <div class="experience-container">
@@ -42,7 +44,7 @@
 
             <h3>First step of the LiDAR data processing</h3>
             <p>
-                <img src="assets/img/projection.PNG" style="float: right; max-width: 400px;">
+                <img src="assets/img/projection.PNG" style="float: right; max-width: 30%;">
                 To construct the map we first need to process the point clouds obtained by the lidar. A
                 point cloud consists of a <b>list of coordinates corresponding to the position of points in three
                     dimensions</b>. The goal is now to have semantic information in addition to the
@@ -54,7 +56,7 @@
             <p>
                 Here is the result:
             </p>
-            <img src="assets/img/projection_result.jpg">
+            <img src="assets/img/projection_result.jpg" style="max-width: 90%;">
             <p>
                 For now, each point has the same color as the corresponding pixel in the image.
                 The points where there is no corresponding pixel in the image will not be used.
@@ -66,9 +68,9 @@
                 We used a pretrained model called <b>FastSeg</b> to do the segmentation.
             </p>
             <div style="width:100%;display: flex; flex-direction: column; align-items:center;">
-                <img src="assets/img/image-019.jpg" style="max-width: 500px;">
-                <img src="assets/img/image-020.jpg" style="max-width: 500px;">
-                <img src="assets/img/image-021.jpg" style="max-width: 500px;">
+                <img src="assets/img/image-019.jpg" style="max-width: 90%;">
+                <img src="assets/img/image-020.jpg" style="max-width: 90%;">
+                <img src="assets/img/image-021.jpg" style="max-width: 90%;">
             </div>
             <p>
                 Now each point of the point cloud has its own class. We just need to <b>reverse the projection</b> to

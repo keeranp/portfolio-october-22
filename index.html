@@ -11,12 +11,14 @@
 
 <body>
     <nav>
-        <h2>Keeran Paheerathan</h2>
-        <a href="index.html#home-page">Home</a>
-        <a href="index.html#experiences">Experiences</a>
-        <a href="index.html#projects">Projects</a>
-        <div class="button">
-            <a href="assets/documents/CV.pdf" target="_blank">Resume</a>
+        <h2 href="index.html">Keeran Paheerathan</h2>
+        <div class="links">
+            <a href="index.html#home-page">Home</a>
+            <a href="index.html#experiences">Experiences</a>
+            <a href="index.html#projects">Projects</a>
+            <div class="button">
+                <a href="assets/documents/CV.pdf" target="_blank">Resume</a>
+            </div>
         </div>
     </nav>
     <header id="home-page">
@@ -28,12 +30,14 @@
             <p>
                 I'm an aspiring Software Engineer with a big interest in Computer Vision and Machine Learning.
             </p>
-            <a href="https://github.com/keeranp" target="_blank"><img src="assets/img/github_logo.png"
-                    style="max-width: 24px;"></a>
-            <a href="https://www.linkedin.com/in/keeran-paheerathan-8602111a6/" target="_blank"><img
-                    src="assets/img/linkedin_logo.png" style="max-width: 24px;"></a>
-            <a href="mailto:keeran.paheerathan@gmail.com" target="_blank"><img src="assets/img/mail_logo.png"
-                    style="max-width: 24px;"></a>
+            <div>
+                <a href="https://github.com/keeranp" target="_blank"><img src="assets/img/github_logo.png"
+                        style="max-width: 24px;"></a>
+                <a href="https://www.linkedin.com/in/keeran-paheerathan-8602111a6/" target="_blank"><img
+                        src="assets/img/linkedin_logo.png" style="max-width: 24px;"></a>
+                <a href="mailto:keeran.paheerathan@gmail.com" target="_blank"><img src="assets/img/mail_logo.png"
+                        style="max-width: 24px;"></a>
+            </div>
         </div>
     </header>
 
@@ -90,7 +94,17 @@
                         KITTI Dataset.
                     </p>
                     <img src="assets/img/image-001.jpg">
+                    <!-- <div class="image"></div> -->
                     <a href="semantic_map.html">Read More</a>
+                </div>
+                <div class="card">
+                    <h3>Pointcloud Annotation Tool</h3>
+                    <p>
+                        I created this tool to help me annotate point clouds during my internship at INRAE.
+                    </p>
+                    <img src="assets/img/annotation.PNG">
+                    <!-- <div class="image"></div> -->
+                    <a href="annotation.html">Read More</a>
                 </div>
                 <div class="card">
                     <h3>Generative Art</h3>
@@ -102,17 +116,6 @@
                     </p>
                     <img src="assets/img/golden-after.jpg">
                     <a href="generativeart.html">Read More</a>
-                </div>
-                <div class="card">
-                    <h6>Assistant Software Engineering Intern</h6>
-                    <h3>H3Dynamics | Singapore (Remote)</h3>
-                    <p>September 2020 - February 2021</p>
-                    <p>
-                        The goal of this project was to create a semantic map of an urban area using the data from the
-                        LiDAR and the cameras of the
-                        KITTI Dataset.
-                    </p>
-                    <a href="#">Read More</a>
                 </div>
             </div>
     </section>
