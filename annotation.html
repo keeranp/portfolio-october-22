@@ -23,17 +23,25 @@
     </nav>
     <div class="experience-container">
         <section class="main">
-            <h2>Pointcloud Annotation Tool</h2>
-            <p>
-                I created this tool to help me annotate point clouds during my internship at INRAE.
-            </p>
+            <div style="display: flex; flex-direction: column; align-items:center;">
+                <h2>Pointcloud Annotation Tool</h2>
+                <p>
+                    I created this tool to help me annotate point clouds during my internship at INRAE.
+                    It has been developed in JavaScript with the <b>Three.js</b> library, a library for creating and displaying
+                    3D objects. To annotate a point cloud, we send a <b>raycast from the mouse position on the
+                        screen</b>. All points
+                    located at a certain distance from this raycast will be annotated.
+                </p>
+                <img src="assets/img/annotation.PNG">
+                <a href="https://pointcloud-annotation-tool.netlify.app/" target="_blank">Try it</a>
+                <a href="https://github.com/keeranp/pointcloud-annotator" target="_blank">See more on Github</a>
+            </div>
         </section>
         <section class="skills">
             <h3>Acquired Skills</h3>
             <ul>
-                <li>Manipulate point clouds with NumPy</li>
-                <li>Do Image Segmentation with a pretrained model</li>
-                <li>Project a point cloud in the coordinate system of a camera</li>
+                <li>Use Three.JS</li>
+                <li>Send a raycast to select certain points</li>
             </ul>
         </section>
     </div>

@@ -24,128 +24,114 @@
     <div class="experience-container">
         <section class="main">
             <h2>My internship at INRAE</h2>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/inrae.jpg" style="float:left; max-width: 15%;">
-                    I did my 5th year internship at <b>INRAE</b>.
-                    <br>
-                    INRAE is <b>the French public research institute</b> working for the coherent and sustainable
-                    development
-                    of <b>agriculture, food and the environment</b>.
-                    <br>
-                    From February 7th 2022 to July 15th 2022, I updated the <b>exploitation method
-                        of the LiDARs (light detection and ranging) of the Phénomobile</b>, a robot allowing <b>high
-                        throughput
-                        phenotyping</b>, and then I developed an <b>application of these
-                        LiDARs on sunflower plots</b>.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/inrae.jpg" class="img-left">
+                I did my 5th year internship at <b>INRAE</b>.
+                <br>
+                INRAE is <b>the French public research institute</b> working for the coherent and sustainable
+                development
+                of <b>agriculture, food and the environment</b>.
+                <br>
+                From February 7th 2022 to July 15th 2022, I updated the <b>exploitation method
+                    of the LiDARs (light detection and ranging) of the Phénomobile</b>, a robot allowing <b>high
+                    throughput
+                    phenotyping</b>, and then I developed an <b>application of these
+                    LiDARs on sunflower plots</b>.
+            </p>
 
             <h3>The Phénomobile</h3>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/pheno.jpg" style="float: right; max-width: 40%;">
-                    The <b>Phénomobile</b> is a robot ordered by <b>INRAE</b> used to <b>study plants in a
-                        field</b>.
-                    It travels autonomously through the plots and collects <b>large scale data</b> on the
-                    state
-                    of
-                    the plants thanks to onboard sensors:
-                </p>
-                <ul>
-                    <li>- 3 Sick LMS400 LiDARs allowing the acquisition of <b>three point clouds of a
-                            plot</b></li>
-                    <li>- 3 Baumer VLG40C RGB cameras to acquire several colour images of a plot</li>
-                    <li>- 2 Airphen V3 multispectral cameras to acquire multiple multispectral images of a
-                        plot
-                    </li>
-                    <li>- 5 LUMIX FR60 Flashes to control the lighting during an acquisition</li>
-                </ul>
-                <p>
-                    With the technology it possesses, this autonomous robot allows for a fine and unambiguous
-                    characterisation of the microplots of an experimental platform.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/pheno.jpg" class="img-right">
+                The <b>Phénomobile</b> is a robot ordered by <b>INRAE</b> used to <b>study plants in a
+                    field</b>.
+                It travels autonomously through the plots and collects <b>large scale data</b> on the
+                state
+                of
+                the plants thanks to onboard sensors:
+            </p>
+            <ul>
+                <li>- 3 Sick LMS400 LiDARs allowing the acquisition of <b>three point clouds of a
+                        plot</b></li>
+                <li>- 3 Baumer VLG40C RGB cameras to acquire several colour images of a plot</li>
+                <li>- 2 Airphen V3 multispectral cameras to acquire multiple multispectral images of a
+                    plot
+                </li>
+                <li>- 5 LUMIX FR60 Flashes to control the lighting during an acquisition</li>
+            </ul>
+            <p>
+                With the technology it possesses, this autonomous robot allows for a fine and unambiguous
+                characterisation of the microplots of an experimental platform.
+            </p>
 
             <h3>Goals of the internship</h3>
-            <div class="paragraph">
-                <div>
-                    <p>
-                        The three LiDARs of the Phenomobile are used to <b>acquire point clouds
-                            on crop canopies in the field</b>.
-                        The objective of my internship is to propose methods of <b>exploitation of these point
-                            clouds</b>
-                        through two steps:
-                    </p>
-                    <ul>
-                        <li>- The <b>global registration of three point clouds in the same reference frame</b>.
-                            Thus, we
-                            will
-                            have
-                            the <b>information contained in the three point clouds in a single cloud.</b>
-                            This one will be denser, which will allow us to have more details on
-                            plants.</li>
-                        <li>- <b>Point cloud segmentation</b> to isolate plant organs in the case of
-                            sunflower.
-                            During the internship I started with a first organ of the sunflower which seemed to be
-                            the
-                            easiest
-                            to detect, <b>the capitulum (the sunflower flower head)</b> on sunflower plots to be
-                            able to
-                            <b>calculate the diameter of each of the
-                                capitula</b>.
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <p>
+                The three LiDARs of the Phenomobile are used to <b>acquire point clouds
+                    on crop canopies in the field</b>.
+                The objective of my internship is to propose methods of <b>exploitation of these point
+                    clouds</b>
+                through two steps:
+            </p>
+            <ul>
+                <li>- The <b>global registration of three point clouds in the same reference frame</b>.
+                    Thus, we
+                    will
+                    have
+                    the <b>information contained in the three point clouds in a single cloud.</b>
+                    This one will be denser, which will allow us to have more details on
+                    plants.</li>
+                <li>- <b>Point cloud segmentation</b> to isolate plant organs in the case of
+                    sunflower.
+                    During the internship I started with a first organ of the sunflower which seemed to be
+                    the
+                    easiest
+                    to detect, <b>the capitulum (the sunflower flower head)</b> on sunflower plots to be
+                    able to
+                    <b>calculate the diameter of each of the
+                        capitula</b>.
+                </li>
+            </ul>
 
             <h3>Global Registration of point clouds</h3>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/exemple_registration.png" style="float: right; max-width:40%;">
-                    The LiDARs of the Phénomobile are <b>mounted on the same measuring head</b>. We
-                    assume that <b>they are static between them</b>. There are two LiDARs with vertical views
-                    and a third one, with a lateral view.
-                    The goal is to align the point clouds with each other by <b>applying rigid
-                        transformations</b>
-                    to
-                    them.
-                    This will allow us to move from a local reference frame for each LiDAR to a common reference
-                    frame.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/exemple_registration.png" class="img-right">
+                The LiDARs of the Phénomobile are <b>mounted on the same measuring head</b>. We
+                assume that <b>they are static between them</b>. There are two LiDARs with vertical views
+                and a third one, with a lateral view.
+                The goal is to align the point clouds with each other by <b>applying rigid
+                    transformations</b>
+                to
+                them.
+                This will allow us to move from a local reference frame for each LiDAR to a common reference
+                frame.
+            </p>
 
             <h4>Registration Method</h4>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/rigid.PNG" style="float: right; max-width: 40%;">
-                    Each rigid transformation has six parameters that we need to find: three for the rotation
-                    and
-                    three for the translation.
-                    We look for parameters such that after the application of the rigid transformations <b>the
-                        distance
-                        between corresponding points in each point cloud is equal to zero</b>.<br>
-                    To find these parameters we will use an optimization algorithm: the <b>Nelder-Mead algorithm
-                        implemented in the
-                        SciPy library</b>.<br>
-                    This algorithm seeks to <b>minimize a function</b>, here the distance
-                    between corresponding points in each point cloud.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/rigid.PNG" class="img-right">
+                Each rigid transformation has six parameters that we need to find: three for the rotation
+                and
+                three for the translation.
+                We look for parameters such that after the application of the rigid transformations <b>the
+                    distance
+                    between corresponding points in each point cloud is equal to zero</b>.<br>
+                To find these parameters we will use an optimization algorithm: the <b>Nelder-Mead algorithm
+                    implemented in the
+                    SciPy library</b>.<br>
+                This algorithm seeks to <b>minimize a function</b>, here the distance
+                between corresponding points in each point cloud.
+            </p>
 
             <h4>Preprocessing</h4>
-
-            <div class="paragraph">
-                <p>
-                    To use the optimization algorithm, we did an acquisition of multiple differently oriented
-                    tables. We decided to use tables because it will be <b>easier to find corresponding points</b> in each point cloud.
-                    However, before any operation, we need to preprocess the point clouds. We <b>removed the ground
-                        and
-                        the
-                        noise</b> from
-                    each point clouds.
-                </p>
-            </div>
+            <p>
+                To use the optimization algorithm, we did an acquisition of multiple differently oriented
+                tables. We decided to use tables because it will be <b>easier to find corresponding points</b> in
+                each point cloud.
+                However, before any operation, we need to preprocess the point clouds. We <b>removed the ground
+                    and
+                    the
+                    noise</b> from
+                each point clouds.
+            </p>
 
             <div class="two-images">
                 <img src="assets/img/before_pre.png">
@@ -153,112 +139,82 @@
             </div>
 
             <h4>Results</h4>
-            <div class="paragraph">
-                <p>
-                    Now we only have to use the algorithm to find the best parameters.
-                    Here is the result of the global registration:
-                </p>
-                <img src="assets/img/registration.png" class="right-image">
-            </div>
+            <p>
+                Now we only have to use the algorithm to find the best parameters.
+                Here is the result of the global registration:
+            </p>
+            <img src="assets/img/registration.png" style="margin: 0 auto">
 
             <h3>Capitula Detection to calculate their diameter</h3>
-            <div class="paragraph">
-                <p>
-                    Measuring the diameter of the flower heads allow us to <b>identify
-                        the most interesting sunflower varieties</b>. However, measuring them by hand on
-                    plots is a tedious process. It is therefore interesting to find a way
-                    to <b>measure them automatically</b>.
-                    To do this, we first need to find a way to detect them in a sunflower plot, and then develop
-                    a method to calculate their diameters.
-                </p>
-            </div>
+            <p>
+                Measuring the diameter of the flower heads allow us to <b>identify
+                    the most interesting sunflower varieties</b>. However, measuring them by hand on
+                plots is a tedious process. It is therefore interesting to find a way
+                to <b>measure them automatically</b>.
+                To do this, we first need to find a way to detect them in a sunflower plot, and then develop
+                a method to calculate their diameters.
+            </p>
 
             <h4>Detection Method</h4>
-            <div class="paragraph">
-                <p>
-                    Because the <b>shape and orientation of the capitula varies a lot</b> in the point clouds, I
-                    decided to
-                    train a <b>supervised neural network</b> to detect them.
-                </p>
-                <div class="two-images">
-                    <img src="assets/img/young_sunflower.png">
-                    <img src="assets/img/old_sunflower.png">
-                </div>
+            <p>
+                Because the <b>shape and orientation of the capitula varies a lot</b> in the point clouds, I
+                decided to
+                train a <b>supervised neural network</b> to detect them.
+            </p>
+            <div class="two-images">
+                <img src="assets/img/young_sunflower.png">
+                <img src="assets/img/old_sunflower.png">
             </div>
 
             <h4>Preprocessing</h4>
-            <div class="paragraph">
-                <p>
-                    Before doing anything, we need to preprocess the sunflower plot point clouds to make them
-                    usable.<br>
-                    First of all, thanks to the global registration we can <b>merge all the point clouds into one
+            <p>
+                Before doing anything, we need to preprocess the sunflower plot point clouds to make them
+                usable.<br>
+                First of all, thanks to the global registration we can <b>merge all the point clouds into one
                     denser point cloud with more information</b>.
-                </p>
-                <div style="display: flex; justify-content:center;">
-                    <img src="assets/img/fusion.png">
-                </div>
-            </div>
-            <div class="paragraph">
-                <p>
-                    Then we need to <b>remove the ground and the noise</b>:
-                </p>
-                <div class="two-images">
-                    <img src="assets/img/ground_removal.png">
-                    <img src="assets/img/denoising.png">
-                </div>
+            </p>
+            <img src="assets/img/fusion.png" style="margin: 0 auto">
+            <p>
+                Then we need to <b>remove the ground and the noise</b>:
+            </p>
+            <div class="two-images">
+                <img src="assets/img/ground_removal.png">
+                <img src="assets/img/denoising.png">
             </div>
 
             <h4>Dataset creation</h4>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/cluster.png" style="float: left; max-width: 20%;">
-                    With usable data, we can start creating the training dataset.<br>
-                    Because it is complex to separate each plant in point cloud, I decided to <b>clusterize the
-                        point cloud using DBSCAN</b>.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/cluster.png" class="img-left">
+                With usable data, we can start creating the training dataset.<br>
+                Because it is complex to separate each plant in point cloud, I decided to <b>clusterize the
+                    point cloud using DBSCAN</b>.
+            </p>
+            <p>In every case <b>the capitula are located on the top part of the plot</b>. So, I decided to
+                only keep the clusters located in this area.
+            </p>
+            <img src="assets/img/clusterization.png" style="margin: 0 auto">
 
-            <div class="paragraph">
-                <div class="bottom-image">
-                    <p>In every case <b>the capitula are located on the top part of the plot</b>. So, I decided to
-                        only keep the clusters located in this area.
-                    </p>
-                    <img src="assets/img/clusterization.png" />
-                </div>
-            </div>
-
-            <div class="paragraph">
-                <p>
-                    The dataset is composed of <b>three classes: capitulum, top of stem and leaf</b>.<br>
-                    It was created using various clusters from <b>different plots at different stage of growing</b>.
-                </p>
-            </div>
+            <p>
+                The dataset is composed of <b>three classes: capitulum, top of stem and leaf</b>.<br>
+                It was created using various clusters from <b>different plots at different stage of growing</b>.
+            </p>
 
             <h4>Training</h4>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/infer.png" style="float: right; max-width:40%">
-                    We used <b>PointNet++</b>, a Deep Learning model from the University of Stanford
-                    for classification or point cloud segmentation, to train our dataset.<br>
-                    The dataset was divided in two part with an 80/20 ratio.
-                    80% of the dataset was used for the training and the other 20% was used for testing.<br>
-                    We obtained a <b>precision of 89% and an mAP of 74%</b>.
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/infer.png" class="img-right">
+                We used <b>PointNet++</b>, a Deep Learning model from the University of Stanford
+                for classification or point cloud segmentation, to train our dataset.<br>
+                The dataset was divided in two part with an 80/20 ratio.
+                80% of the dataset was used for the training and the other 20% was used for testing.<br>
+                We obtained a <b>precision of 89% and an mAP of 74%</b>.
+            </p>
 
             <h4>Diameter calculation</h4>
-            <div class="paragraph">
-                <p>
-                    <img src="assets/img/diamater.png" style="float:left;max-width:30%;">
-                    Now that we can detect the capitula, we can extract them from the pointcloud and
-                    <b>fit a circle on them</b>. The diameter of the circle will be the diameter of capitula.
-                </p>
-            </div>
-
-            <div class="paragraph">
-                <p>
-                </p>
-            </div>
+            <p>
+                <img src="assets/img/diameter.png" class="img-left">
+                Now that we can detect the capitula, we can extract them from the pointcloud and
+                <b>fit a circle on them</b>. The diameter of the circle will be the diameter of capitula.
+            </p>
         </section>
         <section class="skills">
             <h3>Acquired Skills</h3>

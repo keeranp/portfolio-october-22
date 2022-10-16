@@ -45,13 +45,13 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 15px;
         margin-top: 0;
         display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
     nav a {
         text-decoration: none;
         color: #ecf0f1;
+        margin: 0 10px;
     }
 
     nav .button {
@@ -400,21 +400,41 @@ footer {
     margin-left: 0;
 }
 
-.column-paragraph {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.paragraph ul li {
-    text-align: left;
-}
-
 img {
     max-width: 100%;
     height: auto;
     margin: 10px;
+}
+
+@media (min-width: 0px) {
+    .img-left{
+        max-width: 60%;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .img-right{
+        max-width: 60%;
+        display: block;
+        margin: 10px auto;
+    }
+}
+@media (min-width: 1001px) {
+    .img-left{
+        float: left;
+        max-width: 20%;
+        margin: 0 10px;
+    }
+
+    .img-right{
+        float: right;
+        max-width: 40%;
+        margin: 0 10px;
+    }
+}
+
+.main ul li{
+    text-align: left;
 }
 
 .two-images {
